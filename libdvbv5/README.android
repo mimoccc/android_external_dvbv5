@@ -1,0 +1,17 @@
+Android Specific Information For libdvbv5
+=========================================
+
+This is an Android specific port of libdvbv5.
+
+Notes:
+
+The dvb_iconv_to_charset function in parse_string.c copies the source string
+to the destination which is the default behaviour on linux if a string cannot be
+converted. The aim is for the function to android's native icu conversion library
+
+As of 2016-08-20 Upcoming Versions of libdvbv5 are begining to implement dvb remote
+functionality. The implementers have choosen to use libudev in this implementation
+which is obviously a problematic for Android at the moment.
+
+
+

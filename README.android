@@ -1,0 +1,32 @@
+Android Specific Information For dvbv5 utils and libdvbv5
+=========================================================
+
+This repo contains a wip and probably never to be complete port of the dvbv5-tools
+collection and the associated libdvbv5
+
+What's different
+================
+
+The design the Linux DVB Tools and libraries make it non-portable without some
+patching and spackling. Namely the use of argp for command argument processing
+means we have to convert the programs back to the more standard C getopt_long functions.
+
+The dvb_iconv_to_charset function in libdvbv5/parse_string.c uses iconv originally
+which due to androids non posix nature means this is missing. For now a straight
+source to dest mem copy is done on Android. The aim is for the function to android's
+native icu conversion library
+
+As of 2016-08-20 Upcoming Versions of libdvbv5 are begining to implement dvb remote
+functionality. The implementers have choosen to use libudev in this implementation
+which is obviously problematic for Android at the moment.
+
+Compiling
+
+Either add to local manifest or clone into the external directory of your android
+aosp source tree
+
+From the top of the source tree
+git clone http://github.com/trevd/android_external_dvbv5 external/dvbv5
+make dvb-fe-tools dvbv5-zap libdvbv5
+
+
