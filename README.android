@@ -27,6 +27,6 @@ aosp source tree
 
 From the top of the source tree
 git clone http://github.com/trevd/android_external_dvbv5 external/dvbv5
-make dvb-fe-tools dvbv5-zap libdvbv5
+make dvb-fe-tool dvbv5-zap libdvbv5
 
 

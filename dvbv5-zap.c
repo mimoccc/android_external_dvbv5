@@ -813,14 +813,14 @@ int main(int argc, char **argv)
     }
 
     r = asprintf(&args.demux_dev,
-         "/dev/dvb/adapter%i/demux%i", args.adapter, args.demux);
+         "/dev/dvb%i.demux%i", args.adapter, args.demux);
     if (r < 0) {
         fprintf(stderr, _("asprintf error\n"));
         return -1;
     }
 
     r = asprintf(&args.dvr_dev,
-         "/dev/dvb/adapter%i/dvr%i", args.adapter, args.demux);
+         "/dev/dvb%i.dvr%i", args.adapter, args.demux);
     if (r < 0) {
         fprintf(stderr, _("asprintf error\n"));
         return -1;

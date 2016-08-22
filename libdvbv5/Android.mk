@@ -60,7 +60,7 @@ LOCAL_CFLAGS := \
 		-Wno-absolute-value
 
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/include
-
+LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)/include
 LOCAL_MODULE := libdvbv5
 LOCAL_MODULE_TAGS := optional
 
