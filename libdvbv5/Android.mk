@@ -59,6 +59,7 @@ LOCAL_CFLAGS := \
 		-Wno-initializer-overrides \
 		-Wno-absolute-value
 
+LOCAL_SHARED_LIBRARIES := liblog
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/include
 LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)/include
 LOCAL_MODULE := libdvbv5
